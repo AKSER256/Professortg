@@ -17,7 +17,7 @@ BATCH_FILES = {}
 async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[           
-            InlineKeyboardButton('📢 Uᴩᴅᴀᴛᴇꜱ 📢', url=f'https://t.me/{SUPPORT_CHAT}')
+            InlineKeyboardButton('📢 Uᴩᴅᴀᴛᴇꜱ 📢', url=f'https://t.me/Airdrop_Glow')
             ],[
             InlineKeyboardButton('ℹ️ Hᴇʟᴩ ℹ️', url=f"https://t.me/{temp.U_NAME}?start=help")
         ]]
@@ -36,10 +36,10 @@ async def start(client, message):
             InlineKeyboardButton("➕️ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Cʜᴀᴛ ➕", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
             ],[
             InlineKeyboardButton("Sᴇᴀʀᴄʜ 🔎", switch_inline_query_current_chat=''), 
-            InlineKeyboardButton("Cʜᴀɴɴᴇʟ 🔈", url="https://t.me/mkn_bots_updates")
+            InlineKeyboardButton("🛠️ My Oᴡɴᴇʀ", url="https://t.me/Prime_Aigo")
             ],[      
-            InlineKeyboardButton("Hᴇʟᴩ 🕸️", callback_data="help"),
-            InlineKeyboardButton("Aʙᴏᴜᴛ ✨", callback_data="about")
+            InlineKeyboardButton("⚠️ Hᴇʟᴩ", callback_data="help"),
+            InlineKeyboardButton("⚙️ Aʙᴏᴜᴛ", callback_data="about")
         ]]
         m = await message.reply_sticker("CAACAgUAAxkBAAEBvlVk7YKnYxIHVnKW2PUwoibIR2ygGAACBAADwSQxMYnlHW4Ls8gQHgQ") 
         await asyncio.sleep(2)
@@ -52,7 +52,7 @@ async def start(client, message):
         except ChatAdminRequired:
             logger.error("MAKE SURE BOT IS ADMIN IN FORCESUB CHANNEL")
             return
-        btn = [[InlineKeyboardButton("Jᴏɪɴ Mʏ Cʜᴀɴɴᴇʟ ✨", url=invite_link.invite_link)]]
+        btn = [[InlineKeyboardButton("🎗️ Rᴇqᴜᴇꜱᴛ Tᴏ Jᴏɪɴ Mʏ Cʜᴀɴɴᴇʟ 🎗️", url=invite_link.invite_link)]]
         if message.command[1] != "subscribe":
             try:
                 kk, file_id = message.command[1].split("_", 1)
